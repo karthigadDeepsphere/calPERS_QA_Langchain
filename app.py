@@ -1,8 +1,10 @@
 import streamlit as vAR_st
 vAR_st.set_page_config(page_title="Policy Analysis", layout="wide")
 
-from DSAI_Utility.DSAI_Utility import All_Initialization,CSS_Property
-from DSAI_source_code.DSAI_QALangchain import QAwithLangchain
+from src.DSAI_Utility.Sidemenu_initialization import All_Initialization,CSS_Property
+from src.DSAI_source_code.DSAI_QA_Langchain.DSAI_QALangchain import QAwithLangchain
+from src.DSAI_source_code.DSAI_SQL_Agent.DSAI_SQL_agent import SQL_DB_Agent
+from src.DSAI_source_code.DSAI_PDF_File_URL_Conversion.pdf_file_url_conversion import url_pdf_file_conversation
 
 
 if __name__=='__main__':
@@ -12,12 +14,19 @@ if __name__=='__main__':
             """
     vAR_st.markdown(vAR_hide_footer, unsafe_allow_html=True)
     # Applying CSS properties for web page
-    CSS_Property("DSAI_Utility/DSAI_style.css")
+    CSS_Property("src/DSAI_Utility/DSAI_style.css")
     # Initializing Basic Componentes of Web Page
     choice = All_Initialization()
-    
-    if choice=="Policy Analysis Q&A":
+ 
+    if choice=="Policy Q&A (PDF File)":
 
         # function to call QA langchain
         QAwithLangchain() 
         
+    if choice=="Transactional Q&A (Database)":
+
+        #function to call SQL DB Agent
+        SQL_DB_Agent()
+
+    if choice == "Job Aid Q&A (URL)":
+        url_pdf_file_conversation()

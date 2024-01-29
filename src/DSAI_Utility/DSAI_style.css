@@ -84,7 +84,7 @@
     color: rgb(69, 69, 69);
     font-size: 25px;
     position: relative;
-    top: -80px !important;
+    /*top: -100px !important;*/
 }
 
 #root > div:nth-child(1) > div.withScreencast > div > div > div > section.main.st-emotion-cache-uf99v8.ea3mdgi5 > div.block-container.st-emotion-cache-z5fcl4.ea3mdgi4 > div > div > div:nth-child(4) > div > div > div:nth-child(1){
@@ -96,6 +96,12 @@
 button.st-emotion-cache-91nhae.ef3psqc7{
     background: #3e40b7;
     color: white;
+}
+
+/* Chat button */
+button.st-emotion-cache-7ym5gk ef3psqc7{
+    background: #69D2E7;
+    color: white
 }
 
 /* Form input */

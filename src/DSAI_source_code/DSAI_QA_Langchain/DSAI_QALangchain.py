@@ -10,8 +10,8 @@ import os
 import streamlit as st
 import time
 
-os.environ["OPENAI_API_KEY"] = "" # Update with your API key
-# os.environ["OPENAI_API_KEY"]
+# os.environ["OPENAI_API_KEY"] = "" # Update with your API key
+os.environ["OPENAI_API_KEY"]
 
 messages = []
 
