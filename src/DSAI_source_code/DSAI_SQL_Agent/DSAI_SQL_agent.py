@@ -13,7 +13,7 @@ def SQL_DB_Agent():
     col11,col22,col33 = st.columns((2,8,2))
 
     llm = ChatOpenAI(model_name="gpt-4", api_key=os.environ["OPENAI_API_KEY"])
-    db = SQLDatabase.from_uri('mysql+pymysql://root:01012001@34.30.129.74:3306/calPERS_financial_state')
+    db = SQLDatabase.from_uri()
     table_names = "\n".join(db.get_usable_table_names())
     agent_executor = create_sql_agent(
         llm=llm,
